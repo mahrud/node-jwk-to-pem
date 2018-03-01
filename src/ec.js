@@ -74,7 +74,7 @@ function ecJwkToBuffer(jwk, opts) {
 
 function keyToPem(crv, key, opts) {
 	var compact = false;
-	var subjectPublicKey = key.getPublic(compact, 'hex');
+	var subjectPublicKey = key.getPublic('hex', compact);
 	subjectPublicKey = Buffer.from(subjectPublicKey, 'hex');
 	subjectPublicKey = {
 		unused: 0,
